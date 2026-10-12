@@ -1,0 +1,2868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete 140-Topic Master Grammar Syllabus • A1 to C1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070b14;
+      --card-bg: #0f172a;
+      --card-hover: #162038;
+      --border: #1e293b;
+      --border-accent: rgba(99, 102, 241, 0.4);
+      --primary: #6366f1;
+      --primary-light: #818cf8;
+      --primary-glow: rgba(99, 102, 241, 0.25);
+      --cyan: #06b6d4;
+      --cyan-glow: rgba(6, 182, 212, 0.2);
+      --emerald: #10b981;
+      --amber: #f59e0b;
+      --purple: #a855f7;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.5;
+      padding-bottom: 80px;
+      min-height: 100vh;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 65%, rgba(6, 182, 212, 0.06) 0%, transparent 45%);
+    }
+
+    /* TOP BAR / HEADER */
+    header {
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--cyan) 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      box-shadow: 0 0 20px var(--primary-glow);
+    }
+
+    .brand-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #ffffff 40%, #93c5fd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* CONTROLS & SEARCH */
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .search-box {
+      position: relative;
+      min-width: 260px;
+    }
+
+    .search-input {
+      background: #090e1a;
+      border: 1px solid var(--border);
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.88rem;
+      padding: 9px 14px 9px 38px;
+      border-radius: 10px;
+      width: 100%;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 14px var(--primary-glow);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-dim);
+      pointer-events: none;
+    }
+
+    .filter-btn {
+      background: #0d1527;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 9px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover {
+      background: #16223b;
+      color: #fff;
+    }
+
+    .filter-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: var(--primary);
+      color: #a5b4fc;
+    }
+
+    /* PROGRESS BANNER */
+    .progress-bar-wrap {
+      background: #0d1527;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .progress-track {
+      width: 120px;
+      height: 8px;
+      background: #1e293b;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary) 0%, var(--emerald) 100%);
+      width: 0%;
+      border-radius: 999px;
+      transition: width 0.3s ease;
+    }
+
+    .progress-text {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #cbd5e1;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 20px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.6) 100%);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px 32px;
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      line-height: 1.25;
+      background: linear-gradient(135deg, #ffffff 40%, #818cf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 820px;
+      margin-bottom: 18px;
+    }
+
+    .stage-quick-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .quick-chip {
+      background: #090f1e;
+      border: 1px solid var(--border);
+      color: #94a3b8;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.15s;
+    }
+
+    .quick-chip:hover {
+      background: #17233f;
+      color: #38bdf8;
+      border-color: rgba(6, 182, 212, 0.4);
+      transform: translateY(-1px);
+    }
+
+    /* STAGES SECTION */
+    .stage-section {
+      margin-bottom: 32px;
+      scroll-margin-top: 90px;
+    }
+
+    .stage-header {
+      background: linear-gradient(90deg, #0f172a 0%, #131d36 100%);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 14px;
+      padding: 16px 20px;
+      margin-bottom: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .stage-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .stage-badge {
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.35);
+      color: #a5b4fc;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .stage-title {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stage-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cefr-tag {
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .cefr-tag.a1-b1 { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .cefr-tag.b1-b2 { background: rgba(6, 182, 212, 0.15); color: #38bdf8; border: 1px solid rgba(6, 182, 212, 0.3); }
+    .cefr-tag.b2    { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
+    .cefr-tag.c1    { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+
+    .stage-count {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* TOPIC GRID */
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 12px;
+    }
+
+    .topic-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .topic-card:hover {
+      background: var(--card-hover);
+      border-color: rgba(99, 102, 241, 0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .topic-card.completed {
+      background: rgba(16, 185, 129, 0.04);
+      border-color: rgba(16, 185, 129, 0.25);
+    }
+
+    .topic-card.completed .topic-title {
+      color: #6ee7b7;
+    }
+
+    /* CUSTOM CHECKBOX */
+    .checkbox-wrap {
+      padding-top: 2px;
+    }
+
+    .custom-check {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 1.5px solid #334155;
+      border-radius: 6px;
+      background: #090e1a;
+      cursor: pointer;
+      display: grid;
+      place-content: center;
+      transition: all 0.15s;
+    }
+
+    .custom-check:checked {
+      background: var(--emerald);
+      border-color: var(--emerald);
+    }
+
+    .custom-check:checked::before {
+      content: "";
+      width: 10px;
+      height: 6px;
+      border-left: 2px solid #000;
+      border-bottom: 2px solid #000;
+      transform: rotate(-45deg) translate(1px, -1px);
+    }
+
+    .topic-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .topic-head {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .topic-num {
+      font-size: 0.75rem;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--primary-light);
+      background: rgba(99, 102, 241, 0.12);
+      padding: 2px 6px;
+      border-radius: 5px;
+      flex-shrink: 0;
+    }
+
+    .topic-title {
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: #f8fafc;
+      line-height: 1.35;
+    }
+
+    .topic-desc {
+      font-size: 0.81rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* ACTION BAR / FOOTER */
+    .footer-bar {
+      max-width: 1200px;
+      margin: 40px auto 0;
+      padding: 20px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+
+    .footer-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-secondary {
+      background: #0f172a;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: #1e293b;
+      color: #fff;
+    }
+
+    /* TOAST */
+    .toast-popup {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #1e293b;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      display: none;
+      z-index: 999;
+      animation: slideUp 0.25s ease;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* PRINT STYLES */
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+      }
+      header, .hero, .footer-bar, .checkbox-wrap {
+        display: none !important;
+      }
+      .stage-header {
+        background: #f1f5f9;
+        border: 1px solid #ccc;
+        color: #000;
+      }
+      .stage-title { color: #000; }
+      .topic-card {
+        background: #fff;
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+      }
+      .topic-title { color: #000; }
+      .topic-desc { color: #555; }
+    }
+
+    @media (max-width: 640px) {
+      .header-inner { flex-direction: column; align-items: stretch; }
+      .header-controls { flex-direction: column; width: 100%; }
+      .search-box { width: 100%; min-width: auto; }
+      .progress-bar-wrap { justify-content: space-between; }
+      .topics-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-icon">📚</div>
+        <div>
+          <div class="brand-title">Grammar Master Sequence</div>
+          <div class="brand-sub">140 Topics • A1 to C1 Progression</div>
+        </div>
+      </div>
+
+      <div class="header-controls">
+        <div class="search-box">
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="searchInput" class="search-input" placeholder="Search any topic, tense, rule..." oninput="handleSearch()">
+        </div>
+
+        <button class="filter-btn" id="filterPendingBtn" onclick="togglePendingFilter()">
+          <span>⚡ Only Incomplete</span>
+        </button>
+
+        <div class="progress-bar-wrap">
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <div class="progress-text" id="progressText">0 / 140 (0%)</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTAINER -->
+  <div class="container">
+
+    <!-- HERO / QUICK NAV -->
+    <div class="hero">
+      <h1>The Ordered 140-Topic Master Sequence</h1>
+      <p>A systematic, single-track grammar spine from beginner to C1 mastery. Built on the logical order of Raymond Murphy's syllabus, extended with advanced stylistic, conditional, and discourse structures.</p>
+      
+      <div class="stage-quick-nav">
+        
+          <a href="#stage-1" class="quick-chip">
+            <span>⚡</span>
+            <span>Stage 1: Core Verb System</span>
+          </a>
+        
+          <a href="#stage-2" class="quick-chip">
+            <span>🚀</span>
+            <span>Stage 2: Future Meanings</span>
+          </a>
+        
+          <a href="#stage-3" class="quick-chip">
+            <span>🛡️</span>
+            <span>Stage 3: Modal Verbs</span>
+          </a>
+        
+          <a href="#stage-4" class="quick-chip">
+            <span>❓</span>
+            <span>Stage 4: Questions and Auxiliary Verbs</span>
+          </a>
+        
+          <a href="#stage-5" class="quick-chip">
+            <span>🔮</span>
+            <span>Stage 5: Conditionals, Wishes, and Unreal Meaning</span>
+          </a>
+        
+          <a href="#stage-6" class="quick-chip">
+            <span>⚙️</span>
+            <span>Stage 6: Passive and Causative Structures</span>
+          </a>
+        
+          <a href="#stage-7" class="quick-chip">
+            <span>💬</span>
+            <span>Stage 7: Reported Speech</span>
+          </a>
+        
+          <a href="#stage-8" class="quick-chip">
+            <span>🧩</span>
+            <span>Stage 8: Verb Patterns</span>
+          </a>
+        
+          <a href="#stage-9" class="quick-chip">
+            <span>🏷️</span>
+            <span>Stage 9: Nouns, Articles, Determiners, and Pronouns</span>
+          </a>
+        
+          <a href="#stage-10" class="quick-chip">
+            <span>⚖️</span>
+            <span>Stage 10: Description and Comparison</span>
+          </a>
+        
+          <a href="#stage-11" class="quick-chip">
+            <span>🔗</span>
+            <span>Stage 11: Clauses and Sentence Structure</span>
+          </a>
+        
+          <a href="#stage-12" class="quick-chip">
+            <span>🎓</span>
+            <span>Stage 12: C1 Grammar and Style</span>
+          </a>
+        
+      </div>
+    </div>
+
+    <!-- 12 STAGES -->
+    <main id="stagesContainer">
+      
+          <section class="stage-section" id="stage-1" data-stage="1">
+            <div class="stage-header">
+              <div class="stage-title-wrap">
+                <span class="stage-badge">Stage 1</span>
+                <h2 class="stage-title">
+                  <span>⚡</span>
+                  <span>Core Verb System</span>
+                </h2>
+              </div>
+              <div class="stage-meta">
+                <span class="cefr-tag a1-b1">Level: A1–B1</span>
+                <span class="stage-count">18 topics</span>
+              </div>
+            </div>
+
+            <div class="topics-grid">
+              
+                <div class="topic-card" id="topic-card-1" data-num="1" data-search="present continuous actions happening now">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-1" onchange="toggleTopic(1)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#1</span>
+                      <h3 class="topic-title">Present continuous</h3>
+                    </div>
+                    <p class="topic-desc">actions happening now</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-2" data-num="2" data-search="present simple routines, habits, facts, states">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-2" onchange="toggleTopic(2)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#2</span>
+                      <h3 class="topic-title">Present simple</h3>
+                    </div>
+                    <p class="topic-desc">routines, habits, facts, states</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-3" data-num="3" data-search="present continuous versus present simple temporary vs permanent situations">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-3" onchange="toggleTopic(3)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#3</span>
+                      <h3 class="topic-title">Present continuous versus present simple</h3>
+                    </div>
+                    <p class="topic-desc">temporary vs permanent situations</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-4" data-num="4" data-search="stative verbs know, like, believe, need, understand">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-4" onchange="toggleTopic(4)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#4</span>
+                      <h3 class="topic-title">Stative verbs</h3>
+                    </div>
+                    <p class="topic-desc">know, like, believe, need, understand</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-5" data-num="5" data-search="past simple finished past events">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-5" onchange="toggleTopic(5)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#5</span>
+                      <h3 class="topic-title">Past simple</h3>
+                    </div>
+                    <p class="topic-desc">finished past events</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-6" data-num="6" data-search="past continuous actions in progress in the past">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-6" onchange="toggleTopic(6)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#6</span>
+                      <h3 class="topic-title">Past continuous</h3>
+                    </div>
+                    <p class="topic-desc">actions in progress in the past</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-7" data-num="7" data-search="past simple versus past continuous interruptions and background actions">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-7" onchange="toggleTopic(7)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#7</span>
+                      <h3 class="topic-title">Past simple versus past continuous</h3>
+                    </div>
+                    <p class="topic-desc">interruptions and background actions</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-8" data-num="8" data-search="present perfect simple experience and recent events">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-8" onchange="toggleTopic(8)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#8</span>
+                      <h3 class="topic-title">Present perfect simple</h3>
+                    </div>
+                    <p class="topic-desc">experience and recent events</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-9" data-num="9" data-search="present perfect with just, already, yet timing and expectation">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-9" onchange="toggleTopic(9)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#9</span>
+                      <h3 class="topic-title">Present perfect with just, already, yet</h3>
+                    </div>
+                    <p class="topic-desc">timing and expectation</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-10" data-num="10" data-search="present perfect with ever, never, recently, lately life experiences and time frames">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-10" onchange="toggleTopic(10)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#10</span>
+                      <h3 class="topic-title">Present perfect with ever, never, recently, lately</h3>
+                    </div>
+                    <p class="topic-desc">life experiences and time frames</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-11" data-num="11" data-search="present perfect continuous ongoing actions with present result or duration">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-11" onchange="toggleTopic(11)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#11</span>
+                      <h3 class="topic-title">Present perfect continuous</h3>
+                    </div>
+                    <p class="topic-desc">ongoing actions with present result or duration</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-12" data-num="12" data-search="present perfect simple versus continuous completed result vs ongoing process">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-12" onchange="toggleTopic(12)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#12</span>
+                      <h3 class="topic-title">Present perfect simple versus continuous</h3>
+                    </div>
+                    <p class="topic-desc">completed result vs ongoing process</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-13" data-num="13" data-search="for, since, how long, and duration measuring time spans from past to now">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-13" onchange="toggleTopic(13)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#13</span>
+                      <h3 class="topic-title">For, since, how long, and duration</h3>
+                    </div>
+                    <p class="topic-desc">measuring time spans from past to now</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-14" data-num="14" data-search="present perfect versus past simple unfinished time vs finished specific time">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-14" onchange="toggleTopic(14)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#14</span>
+                      <h3 class="topic-title">Present perfect versus past simple</h3>
+                    </div>
+                    <p class="topic-desc">unfinished time vs finished specific time</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-15" data-num="15" data-search="past perfect simple had + v3: an action before another past event">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-15" onchange="toggleTopic(15)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#15</span>
+                      <h3 class="topic-title">Past perfect simple</h3>
+                    </div>
+                    <p class="topic-desc">had + V3: an action before another past event</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-16" data-num="16" data-search="past perfect continuous had been doing: duration leading up to a past moment">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-16" onchange="toggleTopic(16)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#16</span>
+                      <h3 class="topic-title">Past perfect continuous</h3>
+                    </div>
+                    <p class="topic-desc">had been doing: duration leading up to a past moment</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-17" data-num="17" data-search="used to, would, and past habits past routines and discontinued states">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-17" onchange="toggleTopic(17)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#17</span>
+                      <h3 class="topic-title">Used to, would, and past habits</h3>
+                    </div>
+                    <p class="topic-desc">past routines and discontinued states</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-18" data-num="18" data-search="have, have got, and possession ownership, relationships, and illnesses">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-18" onchange="toggleTopic(18)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#18</span>
+                      <h3 class="topic-title">Have, have got, and possession</h3>
+                    </div>
+                    <p class="topic-desc">ownership, relationships, and illnesses</p>
+                  </div>
+                </div>
+              
+            </div>
+          </section>
+        
+          <section class="stage-section" id="stage-2" data-stage="2">
+            <div class="stage-header">
+              <div class="stage-title-wrap">
+                <span class="stage-badge">Stage 2</span>
+                <h2 class="stage-title">
+                  <span>🚀</span>
+                  <span>Future Meanings</span>
+                </h2>
+              </div>
+              <div class="stage-meta">
+                <span class="cefr-tag b1-b2">Level: B1–B2</span>
+                <span class="stage-count">12 topics</span>
+              </div>
+            </div>
+
+            <div class="topics-grid">
+              
+                <div class="topic-card" id="topic-card-19" data-num="19" data-search="present continuous for future arrangements fixed appointments and personal plans">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-19" onchange="toggleTopic(19)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#19</span>
+                      <h3 class="topic-title">Present continuous for future arrangements</h3>
+                    </div>
+                    <p class="topic-desc">fixed appointments and personal plans</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-20" data-num="20" data-search="present simple for timetables and schedules official schedules, transport, events">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-20" onchange="toggleTopic(20)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#20</span>
+                      <h3 class="topic-title">Present simple for timetables and schedules</h3>
+                    </div>
+                    <p class="topic-desc">official schedules, transport, events</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-21" data-num="21" data-search="be going to plans, intentions, and visible evidence">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-21" onchange="toggleTopic(21)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#21</span>
+                      <h3 class="topic-title">Be going to</h3>
+                    </div>
+                    <p class="topic-desc">plans, intentions, and visible evidence</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-22" data-num="22" data-search="will spontaneous decisions, offers, promises, predictions">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-22" onchange="toggleTopic(22)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#22</span>
+                      <h3 class="topic-title">Will</h3>
+                    </div>
+                    <p class="topic-desc">spontaneous decisions, offers, promises, predictions</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-23" data-num="23" data-search="shall offers, suggestions, and formal future use">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-23" onchange="toggleTopic(23)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#23</span>
+                      <h3 class="topic-title">Shall</h3>
+                    </div>
+                    <p class="topic-desc">offers, suggestions, and formal future use</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-24" data-num="24" data-search="will versus going to spontaneous vs pre-planned / evidence-based">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-24" onchange="toggleTopic(24)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#24</span>
+                      <h3 class="topic-title">Will versus going to</h3>
+                    </div>
+                    <p class="topic-desc">spontaneous vs pre-planned / evidence-based</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-25" data-num="25" data-search="will versus present continuous predictions vs arranged meetings">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-25" onchange="toggleTopic(25)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#25</span>
+                      <h3 class="topic-title">Will versus present continuous</h3>
+                    </div>
+                    <p class="topic-desc">predictions vs arranged meetings</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-26" data-num="26" data-search="future continuous will be doing: action in progress at a future time">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-26" onchange="toggleTopic(26)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#26</span>
+                      <h3 class="topic-title">Future continuous</h3>
+                    </div>
+                    <p class="topic-desc">will be doing: action in progress at a future time</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-27" data-num="27" data-search="future perfect simple will have done: action completed before a future deadline">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-27" onchange="toggleTopic(27)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#27</span>
+                      <h3 class="topic-title">Future perfect simple</h3>
+                    </div>
+                    <p class="topic-desc">will have done: action completed before a future deadline</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-28" data-num="28" data-search="future perfect continuous will have been doing: duration up to a future point">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-28" onchange="toggleTopic(28)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#28</span>
+                      <h3 class="topic-title">Future perfect continuous</h3>
+                    </div>
+                    <p class="topic-desc">will have been doing: duration up to a future point</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-29" data-num="29" data-search="time clauses when, until, before, after, as soon as + present tense">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-29" onchange="toggleTopic(29)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#29</span>
+                      <h3 class="topic-title">Time clauses</h3>
+                    </div>
+                    <p class="topic-desc">when, until, before, after, as soon as + Present tense</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-30" data-num="30" data-search="future in the past was going to, would, was about to">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-30" onchange="toggleTopic(30)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#30</span>
+                      <h3 class="topic-title">Future in the past</h3>
+                    </div>
+                    <p class="topic-desc">was going to, would, was about to</p>
+                  </div>
+                </div>
+              
+            </div>
+          </section>
+        
+          <section class="stage-section" id="stage-3" data-stage="3">
+            <div class="stage-header">
+              <div class="stage-title-wrap">
+                <span class="stage-badge">Stage 3</span>
+                <h2 class="stage-title">
+                  <span>🛡️</span>
+                  <span>Modal Verbs</span>
+                </h2>
+              </div>
+              <div class="stage-meta">
+                <span class="cefr-tag b1-b2">Level: B1–B2</span>
+                <span class="stage-count">10 topics</span>
+              </div>
+            </div>
+
+            <div class="topics-grid">
+              
+                <div class="topic-card" id="topic-card-31" data-num="31" data-search="can, could, and be able to ability across present, past, and future">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-31" onchange="toggleTopic(31)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#31</span>
+                      <h3 class="topic-title">Can, could, and be able to</h3>
+                    </div>
+                    <p class="topic-desc">ability across present, past, and future</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-32" data-num="32" data-search="can, could, and may permission and polite requests">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-32" onchange="toggleTopic(32)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#32</span>
+                      <h3 class="topic-title">Can, could, and may</h3>
+                    </div>
+                    <p class="topic-desc">permission and polite requests</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-33" data-num="33" data-search="must, have to, and need to obligation: internal vs external">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-33" onchange="toggleTopic(33)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#33</span>
+                      <h3 class="topic-title">Must, have to, and need to</h3>
+                    </div>
+                    <p class="topic-desc">obligation: internal vs external</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-34" data-num="34" data-search="mustn’t, don’t have to, and needn’t prohibition versus lack of necessity">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-34" onchange="toggleTopic(34)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#34</span>
+                      <h3 class="topic-title">Mustn’t, don’t have to, and needn’t</h3>
+                    </div>
+                    <p class="topic-desc">prohibition versus lack of necessity</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-35" data-num="35" data-search="should, ought to, and had better advice, strong recommendation, criticism">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-35" onchange="toggleTopic(35)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#35</span>
+                      <h3 class="topic-title">Should, ought to, and had better</h3>
+                    </div>
+                    <p class="topic-desc">advice, strong recommendation, criticism</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-36" data-num="36" data-search="may, might, and could present and future possibility">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-36" onchange="toggleTopic(36)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#36</span>
+                      <h3 class="topic-title">May, might, and could</h3>
+                    </div>
+                    <p class="topic-desc">present and future possibility</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-37" data-num="37" data-search="must, can’t, and might logical deduction about the present">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-37" onchange="toggleTopic(37)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#37</span>
+                      <h3 class="topic-title">Must, can’t, and might</h3>
+                    </div>
+                    <p class="topic-desc">logical deduction about the present</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-38" data-num="38" data-search="modal perfects must have, can’t have, might have: past deductions">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-38" onchange="toggleTopic(38)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#38</span>
+                      <h3 class="topic-title">Modal perfects</h3>
+                    </div>
+                    <p class="topic-desc">must have, can’t have, might have: past deductions</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-39" data-num="39" data-search="past modal regrets & criticisms should have, ought to have, could have, needn’t have">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-39" onchange="toggleTopic(39)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#39</span>
+                      <h3 class="topic-title">Past modal regrets & criticisms</h3>
+                    </div>
+                    <p class="topic-desc">should have, ought to have, could have, needn’t have</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-40" data-num="40" data-search="would politeness, preference, habit, and hypothetical meaning">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-40" onchange="toggleTopic(40)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#40</span>
+                      <h3 class="topic-title">Would</h3>
+                    </div>
+                    <p class="topic-desc">politeness, preference, habit, and hypothetical meaning</p>
+                  </div>
+                </div>
+              
+            </div>
+          </section>
+        
+          <section class="stage-section" id="stage-4" data-stage="4">
+            <div class="stage-header">
+              <div class="stage-title-wrap">
+                <span class="stage-badge">Stage 4</span>
+                <h2 class="stage-title">
+                  <span>❓</span>
+                  <span>Questions and Auxiliary Verbs</span>
+                </h2>
+              </div>
+              <div class="stage-meta">
+                <span class="cefr-tag a1-b1">Level: A2–B1</span>
+                <span class="stage-count">9 topics</span>
+              </div>
+            </div>
+
+            <div class="topics-grid">
+              
+                <div class="topic-card" id="topic-card-41" data-num="41" data-search="yes/no questions and wh-questions standard auxiliary inversion patterns">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-41" onchange="toggleTopic(41)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#41</span>
+                      <h3 class="topic-title">Yes/no questions and wh-questions</h3>
+                    </div>
+                    <p class="topic-desc">standard auxiliary inversion patterns</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-42" data-num="42" data-search="subject questions versus object questions who saw you? vs who did you see?">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-42" onchange="toggleTopic(42)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#42</span>
+                      <h3 class="topic-title">Subject questions versus object questions</h3>
+                    </div>
+                    <p class="topic-desc">Who saw you? vs Who did you see?</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-43" data-num="43" data-search="question word order prepositions at the end, complex question frames">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-43" onchange="toggleTopic(43)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#43</span>
+                      <h3 class="topic-title">Question word order</h3>
+                    </div>
+                    <p class="topic-desc">prepositions at the end, complex question frames</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-44" data-num="44" data-search="indirect questions do you know where…? / could you tell me if…?">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-44" onchange="toggleTopic(44)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#44</span>
+                      <h3 class="topic-title">Indirect questions</h3>
+                    </div>
+                    <p class="topic-desc">Do you know where…? / Could you tell me if…?</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-45" data-num="45" data-search="negative questions don’t you…? / isn’t it…?: surprise or confirmation">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-45" onchange="toggleTopic(45)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#45</span>
+                      <h3 class="topic-title">Negative questions</h3>
+                    </div>
+                    <p class="topic-desc">Don’t you…? / Isn’t it…?: surprise or confirmation</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-46" data-num="46" data-search="short answers and auxiliary verbs so do i, neither do i, i am too">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-46" onchange="toggleTopic(46)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#46</span>
+                      <h3 class="topic-title">Short answers and auxiliary verbs</h3>
+                    </div>
+                    <p class="topic-desc">so do I, neither do I, I am too</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-47" data-num="47" data-search="question tags intonation, agreement, and checking information">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-47" onchange="toggleTopic(47)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#47</span>
+                      <h3 class="topic-title">Question tags</h3>
+                    </div>
+                    <p class="topic-desc">intonation, agreement, and checking information</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-48" data-num="48" data-search="emphatic do i do agree; i did call you yesterday">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-48" onchange="toggleTopic(48)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#48</span>
+                      <h3 class="topic-title">Emphatic do</h3>
+                    </div>
+                    <p class="topic-desc">I do agree; I did call you yesterday</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-49" data-num="49" data-search="ellipsis and substitution so, neither, not, do so, avoiding repetition">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-49" onchange="toggleTopic(49)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#49</span>
+                      <h3 class="topic-title">Ellipsis and substitution</h3>
+                    </div>
+                    <p class="topic-desc">so, neither, not, do so, avoiding repetition</p>
+                  </div>
+                </div>
+              
+            </div>
+          </section>
+        
+          <section class="stage-section" id="stage-5" data-stage="5">
+            <div class="stage-header">
+              <div class="stage-title-wrap">
+                <span class="stage-badge">Stage 5</span>
+                <h2 class="stage-title">
+                  <span>🔮</span>
+                  <span>Conditionals, Wishes, and Unreal Meaning</span>
+                </h2>
+              </div>
+              <div class="stage-meta">
+                <span class="cefr-tag b1-b2">Level: B1–B2</span>
+                <span class="stage-count">10 topics</span>
+              </div>
+            </div>
+
+            <div class="topics-grid">
+              
+                <div class="topic-card" id="topic-card-50" data-num="50" data-search="zero conditional facts, scientific truths, general rules">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-50" onchange="toggleTopic(50)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#50</span>
+                      <h3 class="topic-title">Zero conditional</h3>
+                    </div>
+                    <p class="topic-desc">facts, scientific truths, general rules</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-51" data-num="51" data-search="first conditional real future possibility and consequences">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-51" onchange="toggleTopic(51)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#51</span>
+                      <h3 class="topic-title">First conditional</h3>
+                    </div>
+                    <p class="topic-desc">real future possibility and consequences</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-52" data-num="52" data-search="conditional conjunctions unless, provided/providing, as long as, in case">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-52" onchange="toggleTopic(52)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#52</span>
+                      <h3 class="topic-title">Conditional conjunctions</h3>
+                    </div>
+                    <p class="topic-desc">unless, provided/providing, as long as, in case</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-53" data-num="53" data-search="second conditional present/future hypothetical situations (unreal)">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-53" onchange="toggleTopic(53)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#53</span>
+                      <h3 class="topic-title">Second conditional</h3>
+                    </div>
+                    <p class="topic-desc">present/future hypothetical situations (unreal)</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-54" data-num="54" data-search="third conditional past hypothetical situations and regret">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-54" onchange="toggleTopic(54)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#54</span>
+                      <h3 class="topic-title">Third conditional</h3>
+                    </div>
+                    <p class="topic-desc">past hypothetical situations and regret</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-55" data-num="55" data-search="mixed conditionals past cause with present result, or vice versa">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-55" onchange="toggleTopic(55)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#55</span>
+                      <h3 class="topic-title">Mixed conditionals</h3>
+                    </div>
+                    <p class="topic-desc">past cause with present result, or vice versa</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-56" data-num="56" data-search="i wish and if only for present situations wishes about current reality (past tense)">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-56" onchange="toggleTopic(56)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#56</span>
+                      <h3 class="topic-title">I wish and if only for present situations</h3>
+                    </div>
+                    <p class="topic-desc">wishes about current reality (past tense)</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-57" data-num="57" data-search="i wish and if only for past regret regrets about past events (past perfect)">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-57" onchange="toggleTopic(57)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#57</span>
+                      <h3 class="topic-title">I wish and if only for past regret</h3>
+                    </div>
+                    <p class="topic-desc">regrets about past events (past perfect)</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-58" data-num="58" data-search="unreal structures would rather, would prefer, it’s time, and suppose">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-58" onchange="toggleTopic(58)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#58</span>
+                      <h3 class="topic-title">Unreal structures</h3>
+                    </div>
+                    <p class="topic-desc">would rather, would prefer, it’s time, and suppose</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-59" data-num="59" data-search="as if and as though similes, impressions, and hypothetical appearance">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-59" onchange="toggleTopic(59)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#59</span>
+                      <h3 class="topic-title">As if and as though</h3>
+                    </div>
+                    <p class="topic-desc">similes, impressions, and hypothetical appearance</p>
+                  </div>
+                </div>
+              
+            </div>
+          </section>
+        
+          <section class="stage-section" id="stage-6" data-stage="6">
+            <div class="stage-header">
+              <div class="stage-title-wrap">
+                <span class="stage-badge">Stage 6</span>
+                <h2 class="stage-title">
+                  <span>⚙️</span>
+                  <span>Passive and Causative Structures</span>
+                </h2>
+              </div>
+              <div class="stage-meta">
+                <span class="cefr-tag b1-b2">Level: B1–B2</span>
+                <span class="stage-count">8 topics</span>
+              </div>
+            </div>
+
+            <div class="topics-grid">
+              
+                <div class="topic-card" id="topic-card-60" data-num="60" data-search="passive voice: present and past simple be + v3: focus on action and receiver">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-60" onchange="toggleTopic(60)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#60</span>
+                      <h3 class="topic-title">Passive voice: present and past simple</h3>
+                    </div>
+                    <p class="topic-desc">be + V3: focus on action and receiver</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-61" data-num="61" data-search="passive voice: continuous and perfect forms is being done, has been done, had been done">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-61" onchange="toggleTopic(61)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#61</span>
+                      <h3 class="topic-title">Passive voice: continuous and perfect forms</h3>
+                    </div>
+                    <p class="topic-desc">is being done, has been done, had been done</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-62" data-num="62" data-search="passive with modal verbs must be done; should have been done">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-62" onchange="toggleTopic(62)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#62</span>
+                      <h3 class="topic-title">Passive with modal verbs</h3>
+                    </div>
+                    <p class="topic-desc">must be done; should have been done</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-63" data-num="63" data-search="passive reporting structures it is said that…; he is believed to…">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-63" onchange="toggleTopic(63)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#63</span>
+                      <h3 class="topic-title">Passive reporting structures</h3>
+                    </div>
+                    <p class="topic-desc">It is said that…; He is believed to…</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-64" data-num="64" data-search="verbs with two objects in the passive i was given… vs it was given to me">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-64" onchange="toggleTopic(64)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#64</span>
+                      <h3 class="topic-title">Verbs with two objects in the passive</h3>
+                    </div>
+                    <p class="topic-desc">I was given… vs It was given to me</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-65" data-num="65" data-search="causative have/get something done arranging for a professional service">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-65" onchange="toggleTopic(65)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#65</span>
+                      <h3 class="topic-title">Causative have/get something done</h3>
+                    </div>
+                    <p class="topic-desc">arranging for a professional service</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-66" data-num="66" data-search="causative verbs make, let, have, get, and help somebody do">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-66" onchange="toggleTopic(66)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#66</span>
+                      <h3 class="topic-title">Causative verbs</h3>
+                    </div>
+                    <p class="topic-desc">make, let, have, get, and help somebody do</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-67" data-num="67" data-search="get passive get hurt, get promoted, get arrested: informal/action">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-67" onchange="toggleTopic(67)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#67</span>
+                      <h3 class="topic-title">Get passive</h3>
+                    </div>
+                    <p class="topic-desc">get hurt, get promoted, get arrested: informal/action</p>
+                  </div>
+                </div>
+              
+            </div>
+          </section>
+        
+          <section class="stage-section" id="stage-7" data-stage="7">
+            <div class="stage-header">
+              <div class="stage-title-wrap">
+                <span class="stage-badge">Stage 7</span>
+                <h2 class="stage-title">
+                  <span>💬</span>
+                  <span>Reported Speech</span>
+                </h2>
+              </div>
+              <div class="stage-meta">
+                <span class="cefr-tag b1-b2">Level: B1–B2</span>
+                <span class="stage-count">7 topics</span>
+              </div>
+            </div>
+
+            <div class="topics-grid">
+              
+                <div class="topic-card" id="topic-card-68" data-num="68" data-search="reported statements say that, tell somebody that">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-68" onchange="toggleTopic(68)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#68</span>
+                      <h3 class="topic-title">Reported statements</h3>
+                    </div>
+                    <p class="topic-desc">say that, tell somebody that</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-69" data-num="69" data-search="tense backshift in reported speech present to past, past to past perfect">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-69" onchange="toggleTopic(69)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#69</span>
+                      <h3 class="topic-title">Tense backshift in reported speech</h3>
+                    </div>
+                    <p class="topic-desc">present to past, past to past perfect</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-70" data-num="70" data-search="reported questions if/whether, wh-word order (no question mark/inversion)">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-70" onchange="toggleTopic(70)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#70</span>
+                      <h3 class="topic-title">Reported questions</h3>
+                    </div>
+                    <p class="topic-desc">if/whether, wh-word order (no question mark/inversion)</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-71" data-num="71" data-search="reported commands, requests, advice, and warnings tell/ask/warn somebody to do">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-71" onchange="toggleTopic(71)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#71</span>
+                      <h3 class="topic-title">Reported commands, requests, advice, and warnings</h3>
+                    </div>
+                    <p class="topic-desc">tell/ask/warn somebody to do</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-72" data-num="72" data-search="reporting verbs admit, deny, suggest, recommend, promise, refuse">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-72" onchange="toggleTopic(72)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#72</span>
+                      <h3 class="topic-title">Reporting verbs</h3>
+                    </div>
+                    <p class="topic-desc">admit, deny, suggest, recommend, promise, refuse</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-73" data-num="73" data-search="reporting verbs with to-infinitive, -ing, or that-clauses verb pattern categorisation">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-73" onchange="toggleTopic(73)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#73</span>
+                      <h3 class="topic-title">Reporting verbs with to-infinitive, -ing, or that-clauses</h3>
+                    </div>
+                    <p class="topic-desc">verb pattern categorisation</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-74" data-num="74" data-search="direct speech, quotation, and reporting style punctuation and literary/journalistic formats">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-74" onchange="toggleTopic(74)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#74</span>
+                      <h3 class="topic-title">Direct speech, quotation, and reporting style</h3>
+                    </div>
+                    <p class="topic-desc">punctuation and literary/journalistic formats</p>
+                  </div>
+                </div>
+              
+            </div>
+          </section>
+        
+          <section class="stage-section" id="stage-8" data-stage="8">
+            <div class="stage-header">
+              <div class="stage-title-wrap">
+                <span class="stage-badge">Stage 8</span>
+                <h2 class="stage-title">
+                  <span>🧩</span>
+                  <span>Verb Patterns</span>
+                </h2>
+              </div>
+              <div class="stage-meta">
+                <span class="cefr-tag b1-b2">Level: B1–B2</span>
+                <span class="stage-count">11 topics</span>
+              </div>
+            </div>
+
+            <div class="topics-grid">
+              
+                <div class="topic-card" id="topic-card-75" data-num="75" data-search="verb + -ing enjoy doing, avoid doing, suggest doing">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-75" onchange="toggleTopic(75)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#75</span>
+                      <h3 class="topic-title">Verb + -ing</h3>
+                    </div>
+                    <p class="topic-desc">enjoy doing, avoid doing, suggest doing</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-76" data-num="76" data-search="verb + to-infinitive decide to do, hope to do, manage to do">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-76" onchange="toggleTopic(76)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#76</span>
+                      <h3 class="topic-title">Verb + to-infinitive</h3>
+                    </div>
+                    <p class="topic-desc">decide to do, hope to do, manage to do</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-77" data-num="77" data-search="verb + object + to-infinitive want somebody to do, advise somebody to do">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-77" onchange="toggleTopic(77)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#77</span>
+                      <h3 class="topic-title">Verb + object + to-infinitive</h3>
+                    </div>
+                    <p class="topic-desc">want somebody to do, advise somebody to do</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-78" data-num="78" data-search="verb + object + bare infinitive make/let somebody do">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-78" onchange="toggleTopic(78)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#78</span>
+                      <h3 class="topic-title">Verb + object + bare infinitive</h3>
+                    </div>
+                    <p class="topic-desc">make/let somebody do</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-79" data-num="79" data-search="verb + -ing or infinitive: different meaning remember, stop, try, regret, forget">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-79" onchange="toggleTopic(79)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#79</span>
+                      <h3 class="topic-title">Verb + -ing or infinitive: different meaning</h3>
+                    </div>
+                    <p class="topic-desc">remember, stop, try, regret, forget</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-80" data-num="80" data-search="verb + -ing or infinitive: little/no difference begin, start, continue, intend">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-80" onchange="toggleTopic(80)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#80</span>
+                      <h3 class="topic-title">Verb + -ing or infinitive: little/no difference</h3>
+                    </div>
+                    <p class="topic-desc">begin, start, continue, intend</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-81" data-num="81" data-search="prefer, would prefer, and would rather expressing general vs specific preferences">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-81" onchange="toggleTopic(81)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#81</span>
+                      <h3 class="topic-title">Prefer, would prefer, and would rather</h3>
+                    </div>
+                    <p class="topic-desc">expressing general vs specific preferences</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-82" data-num="82" data-search="verbs of perception see/hear/watch somebody do vs doing">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-82" onchange="toggleTopic(82)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#82</span>
+                      <h3 class="topic-title">Verbs of perception</h3>
+                    </div>
+                    <p class="topic-desc">see/hear/watch somebody do vs doing</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-83" data-num="83" data-search="infinitives of purpose to do, in order to do, so as to do">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-83" onchange="toggleTopic(83)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#83</span>
+                      <h3 class="topic-title">Infinitives of purpose</h3>
+                    </div>
+                    <p class="topic-desc">to do, in order to do, so as to do</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-84" data-num="84" data-search="result and purpose clauses so that, such…that, too…to, enough to">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-84" onchange="toggleTopic(84)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#84</span>
+                      <h3 class="topic-title">Result and purpose clauses</h3>
+                    </div>
+                    <p class="topic-desc">so that, such…that, too…to, enough to</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-85" data-num="85" data-search="participle clauses having finished…, feeling tired…, built in 1900…">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-85" onchange="toggleTopic(85)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#85</span>
+                      <h3 class="topic-title">Participle clauses</h3>
+                    </div>
+                    <p class="topic-desc">Having finished…, Feeling tired…, Built in 1900…</p>
+                  </div>
+                </div>
+              
+            </div>
+          </section>
+        
+          <section class="stage-section" id="stage-9" data-stage="9">
+            <div class="stage-header">
+              <div class="stage-title-wrap">
+                <span class="stage-badge">Stage 9</span>
+                <h2 class="stage-title">
+                  <span>🏷️</span>
+                  <span>Nouns, Articles, Determiners, and Pronouns</span>
+                </h2>
+              </div>
+              <div class="stage-meta">
+                <span class="cefr-tag b1-b2">Level: A2–B2</span>
+                <span class="stage-count">14 topics</span>
+              </div>
+            </div>
+
+            <div class="topics-grid">
+              
+                <div class="topic-card" id="topic-card-86" data-num="86" data-search="countable and uncountable nouns mass nouns, dual nouns, measurement units">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-86" onchange="toggleTopic(86)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#86</span>
+                      <h3 class="topic-title">Countable and uncountable nouns</h3>
+                    </div>
+                    <p class="topic-desc">mass nouns, dual nouns, measurement units</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-87" data-num="87" data-search="quantifiers: basic & large quantities some, any, much, many, a lot of, plenty of">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-87" onchange="toggleTopic(87)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#87</span>
+                      <h3 class="topic-title">Quantifiers: basic & large quantities</h3>
+                    </div>
+                    <p class="topic-desc">some, any, much, many, a lot of, plenty of</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-88" data-num="88" data-search="quantifiers: small quantities few, a few, little, a little, less, fewer">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-88" onchange="toggleTopic(88)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#88</span>
+                      <h3 class="topic-title">Quantifiers: small quantities</h3>
+                    </div>
+                    <p class="topic-desc">few, a few, little, a little, less, fewer</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-89" data-num="89" data-search="articles: indefinite (a/an) first mention, jobs, singular countables">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-89" onchange="toggleTopic(89)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#89</span>
+                      <h3 class="topic-title">Articles: indefinite (a/an)</h3>
+                    </div>
+                    <p class="topic-desc">first mention, jobs, singular countables</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-90" data-num="90" data-search="articles: definite (the) unique nouns, second mention, shared context">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-90" onchange="toggleTopic(90)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#90</span>
+                      <h3 class="topic-title">Articles: definite (the)</h3>
+                    </div>
+                    <p class="topic-desc">unique nouns, second mention, shared context</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-91" data-num="91" data-search="zero article general meaning, institutions (school, hospital), meals, places">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-91" onchange="toggleTopic(91)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#91</span>
+                      <h3 class="topic-title">Zero article</h3>
+                    </div>
+                    <p class="topic-desc">general meaning, institutions (school, hospital), meals, places</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-92" data-num="92" data-search="articles with geographical & proper names oceans, mountain ranges vs single peaks, countries">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-92" onchange="toggleTopic(92)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#92</span>
+                      <h3 class="topic-title">Articles with geographical & proper names</h3>
+                    </div>
+                    <p class="topic-desc">oceans, mountain ranges vs single peaks, countries</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-93" data-num="93" data-search="nouns & plurals singular and plural nouns, irregular plurals, collective nouns">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-93" onchange="toggleTopic(93)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#93</span>
+                      <h3 class="topic-title">Nouns & Plurals</h3>
+                    </div>
+                    <p class="topic-desc">singular and plural nouns, irregular plurals, collective nouns</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-94" data-num="94" data-search="possession apostrophe-s ('s) and 'of' structures">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-94" onchange="toggleTopic(94)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#94</span>
+                      <h3 class="topic-title">Possession</h3>
+                    </div>
+                    <p class="topic-desc">apostrophe-s ('s) and 'of' structures</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-95" data-num="95" data-search="pronouns subject, object, possessive, reflexive, reciprocal">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-95" onchange="toggleTopic(95)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#95</span>
+                      <h3 class="topic-title">Pronouns</h3>
+                    </div>
+                    <p class="topic-desc">subject, object, possessive, reflexive, reciprocal</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-96" data-num="96" data-search="determiners all, every, each, both, either, neither">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-96" onchange="toggleTopic(96)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#96</span>
+                      <h3 class="topic-title">Determiners</h3>
+                    </div>
+                    <p class="topic-desc">all, every, each, both, either, neither</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-97" data-num="97" data-search="indefinite pronouns someone, anyone, no one, everything">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-97" onchange="toggleTopic(97)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#97</span>
+                      <h3 class="topic-title">Indefinite pronouns</h3>
+                    </div>
+                    <p class="topic-desc">someone, anyone, no one, everything</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-98" data-num="98" data-search="there and it dummy subjects and introductory structures">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-98" onchange="toggleTopic(98)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#98</span>
+                      <h3 class="topic-title">There and it</h3>
+                    </div>
+                    <p class="topic-desc">dummy subjects and introductory structures</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-99" data-num="99" data-search="one/ones, substitution, and avoiding repetition replacing countable nouns in discourse">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-99" onchange="toggleTopic(99)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#99</span>
+                      <h3 class="topic-title">One/ones, substitution, and avoiding repetition</h3>
+                    </div>
+                    <p class="topic-desc">replacing countable nouns in discourse</p>
+                  </div>
+                </div>
+              
+            </div>
+          </section>
+        
+          <section class="stage-section" id="stage-10" data-stage="10">
+            <div class="stage-header">
+              <div class="stage-title-wrap">
+                <span class="stage-badge">Stage 10</span>
+                <h2 class="stage-title">
+                  <span>⚖️</span>
+                  <span>Description and Comparison</span>
+                </h2>
+              </div>
+              <div class="stage-meta">
+                <span class="cefr-tag b1-b2">Level: B1–B2</span>
+                <span class="stage-count">11 topics</span>
+              </div>
+            </div>
+
+            <div class="topics-grid">
+              
+                <div class="topic-card" id="topic-card-100" data-num="100" data-search="adjective order opinion, size, age, shape, color, origin, material, purpose">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-100" onchange="toggleTopic(100)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#100</span>
+                      <h3 class="topic-title">Adjective order</h3>
+                    </div>
+                    <p class="topic-desc">opinion, size, age, shape, color, origin, material, purpose</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-101" data-num="101" data-search="participial adjectives boring/bored; interested/interesting (-ed vs -ing)">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-101" onchange="toggleTopic(101)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#101</span>
+                      <h3 class="topic-title">Participial adjectives</h3>
+                    </div>
+                    <p class="topic-desc">boring/bored; interested/interesting (-ed vs -ing)</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-102" data-num="102" data-search="adjectives after linking verbs seem, look, feel, become, taste, smell">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-102" onchange="toggleTopic(102)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#102</span>
+                      <h3 class="topic-title">Adjectives after linking verbs</h3>
+                    </div>
+                    <p class="topic-desc">seem, look, feel, become, taste, smell</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-103" data-num="103" data-search="adverbs manner, frequency, degree, place, and comment">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-103" onchange="toggleTopic(103)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#103</span>
+                      <h3 class="topic-title">Adverbs</h3>
+                    </div>
+                    <p class="topic-desc">manner, frequency, degree, place, and comment</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-104" data-num="104" data-search="adjective versus adverb pairs hard/hardly, late/lately, near/nearly, fast/fast">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-104" onchange="toggleTopic(104)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#104</span>
+                      <h3 class="topic-title">Adjective versus adverb pairs</h3>
+                    </div>
+                    <p class="topic-desc">hard/hardly, late/lately, near/nearly, fast/fast</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-105" data-num="105" data-search="comparatives -er vs more, irregular comparatives">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-105" onchange="toggleTopic(105)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#105</span>
+                      <h3 class="topic-title">Comparatives</h3>
+                    </div>
+                    <p class="topic-desc">-er vs more, irregular comparatives</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-106" data-num="106" data-search="comparative modifiers much, far, slightly, a bit, significantly">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-106" onchange="toggleTopic(106)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#106</span>
+                      <h3 class="topic-title">Comparative modifiers</h3>
+                    </div>
+                    <p class="topic-desc">much, far, slightly, a bit, significantly</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-107" data-num="107" data-search="equality and inequality as…as, not as…as, less…than">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-107" onchange="toggleTopic(107)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#107</span>
+                      <h3 class="topic-title">Equality and inequality</h3>
+                    </div>
+                    <p class="topic-desc">as…as, not as…as, less…than</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-108" data-num="108" data-search="superlatives the -est, the most, least, irregular forms">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-108" onchange="toggleTopic(108)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#108</span>
+                      <h3 class="topic-title">Superlatives</h3>
+                    </div>
+                    <p class="topic-desc">the -est, the most, least, irregular forms</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-109" data-num="109" data-search="advanced comparison the more…the more; by far; one of the most">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-109" onchange="toggleTopic(109)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#109</span>
+                      <h3 class="topic-title">Advanced comparison</h3>
+                    </div>
+                    <p class="topic-desc">the more…the more; by far; one of the most</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-110" data-num="110" data-search="degree structures so, such, too, enough, quite, rather, fairly">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-110" onchange="toggleTopic(110)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#110</span>
+                      <h3 class="topic-title">Degree structures</h3>
+                    </div>
+                    <p class="topic-desc">so, such, too, enough, quite, rather, fairly</p>
+                  </div>
+                </div>
+              
+            </div>
+          </section>
+        
+          <section class="stage-section" id="stage-11" data-stage="11">
+            <div class="stage-header">
+              <div class="stage-title-wrap">
+                <span class="stage-badge">Stage 11</span>
+                <h2 class="stage-title">
+                  <span>🔗</span>
+                  <span>Clauses and Sentence Structure</span>
+                </h2>
+              </div>
+              <div class="stage-meta">
+                <span class="cefr-tag b2">Level: B2</span>
+                <span class="stage-count">13 topics</span>
+              </div>
+            </div>
+
+            <div class="topics-grid">
+              
+                <div class="topic-card" id="topic-card-111" data-num="111" data-search="basic word order subject–verb–object, place before time">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-111" onchange="toggleTopic(111)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#111</span>
+                      <h3 class="topic-title">Basic word order</h3>
+                    </div>
+                    <p class="topic-desc">subject–verb–object, place before time</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-112" data-num="112" data-search="adverb position and order of adverbs front, mid, and end sentence placements">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-112" onchange="toggleTopic(112)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#112</span>
+                      <h3 class="topic-title">Adverb position and order of adverbs</h3>
+                    </div>
+                    <p class="topic-desc">front, mid, and end sentence placements</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-113" data-num="113" data-search="relative clauses: defining clauses essential identification, no commas, 'that' allowed">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-113" onchange="toggleTopic(113)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#113</span>
+                      <h3 class="topic-title">Relative clauses: defining clauses</h3>
+                    </div>
+                    <p class="topic-desc">essential identification, no commas, 'that' allowed</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-114" data-num="114" data-search="relative clauses: non-defining clauses extra information, commas required, no 'that'">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-114" onchange="toggleTopic(114)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#114</span>
+                      <h3 class="topic-title">Relative clauses: non-defining clauses</h3>
+                    </div>
+                    <p class="topic-desc">extra information, commas required, no 'that'</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-115" data-num="115" data-search="relative pronouns who, whom, whose, which, that, where, when">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-115" onchange="toggleTopic(115)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#115</span>
+                      <h3 class="topic-title">Relative pronouns</h3>
+                    </div>
+                    <p class="topic-desc">who, whom, whose, which, that, where, when</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-116" data-num="116" data-search="reduced relative clauses the people living here; the book written by…">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-116" onchange="toggleTopic(116)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#116</span>
+                      <h3 class="topic-title">Reduced relative clauses</h3>
+                    </div>
+                    <p class="topic-desc">the people living here; the book written by…</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-117" data-num="117" data-search="noun clauses what, whether, if, that-clauses acting as subjects/objects">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-117" onchange="toggleTopic(117)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#117</span>
+                      <h3 class="topic-title">Noun clauses</h3>
+                    </div>
+                    <p class="topic-desc">what, whether, if, that-clauses acting as subjects/objects</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-118" data-num="118" data-search="reason, result, purpose, and contrast clauses adverbial clause structures">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-118" onchange="toggleTopic(118)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#118</span>
+                      <h3 class="topic-title">Reason, result, purpose, and contrast clauses</h3>
+                    </div>
+                    <p class="topic-desc">adverbial clause structures</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-119" data-num="119" data-search="linkers of cause and result because, since, as, so, therefore, consequently">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-119" onchange="toggleTopic(119)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#119</span>
+                      <h3 class="topic-title">Linkers of cause and result</h3>
+                    </div>
+                    <p class="topic-desc">because, since, as, so, therefore, consequently</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-120" data-num="120" data-search="contrast linkers although, though, even though, despite, in spite of">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-120" onchange="toggleTopic(120)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#120</span>
+                      <h3 class="topic-title">Contrast linkers</h3>
+                    </div>
+                    <p class="topic-desc">although, though, even though, despite, in spite of</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-121" data-num="121" data-search="addition and alternative in addition, moreover, besides, either…or">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-121" onchange="toggleTopic(121)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#121</span>
+                      <h3 class="topic-title">Addition and alternative</h3>
+                    </div>
+                    <p class="topic-desc">in addition, moreover, besides, either…or</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-122" data-num="122" data-search="time linkers while, during, by the time, until, since">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-122" onchange="toggleTopic(122)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#122</span>
+                      <h3 class="topic-title">Time linkers</h3>
+                    </div>
+                    <p class="topic-desc">while, during, by the time, until, since</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-123" data-num="123" data-search="concession and condition even if, whereas, while, otherwise">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-123" onchange="toggleTopic(123)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#123</span>
+                      <h3 class="topic-title">Concession and condition</h3>
+                    </div>
+                    <p class="topic-desc">even if, whereas, while, otherwise</p>
+                  </div>
+                </div>
+              
+            </div>
+          </section>
+        
+          <section class="stage-section" id="stage-12" data-stage="12">
+            <div class="stage-header">
+              <div class="stage-title-wrap">
+                <span class="stage-badge">Stage 12</span>
+                <h2 class="stage-title">
+                  <span>🎓</span>
+                  <span>C1 Grammar and Style</span>
+                </h2>
+              </div>
+              <div class="stage-meta">
+                <span class="cefr-tag c1">Level: C1</span>
+                <span class="stage-count">17 topics</span>
+              </div>
+            </div>
+
+            <div class="topics-grid">
+              
+                <div class="topic-card" id="topic-card-124" data-num="124" data-search="inversion after negative/limiting adverbials never have i seen… / rarely do they mention…">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-124" onchange="toggleTopic(124)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#124</span>
+                      <h3 class="topic-title">Inversion after negative/limiting adverbials</h3>
+                    </div>
+                    <p class="topic-desc">Never have I seen… / Rarely do they mention…</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-125" data-num="125" data-search="inversion with time sequences hardly, scarcely, no sooner…than">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-125" onchange="toggleTopic(125)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#125</span>
+                      <h3 class="topic-title">Inversion with time sequences</h3>
+                    </div>
+                    <p class="topic-desc">hardly, scarcely, no sooner…than</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-126" data-num="126" data-search="inversion in conditionals had i known…; were i to…; should you require…">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-126" onchange="toggleTopic(126)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#126</span>
+                      <h3 class="topic-title">Inversion in conditionals</h3>
+                    </div>
+                    <p class="topic-desc">Had I known…; Were I to…; Should you require…</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-127" data-num="127" data-search="cleft sentences it was john who…; what i need is…; all i want is…">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-127" onchange="toggleTopic(127)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#127</span>
+                      <h3 class="topic-title">Cleft sentences</h3>
+                    </div>
+                    <p class="topic-desc">It was John who…; What I need is…; All I want is…</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-128" data-num="128" data-search="fronting for emphasis this i cannot accept; under the tree sat an old man">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-128" onchange="toggleTopic(128)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#128</span>
+                      <h3 class="topic-title">Fronting for emphasis</h3>
+                    </div>
+                    <p class="topic-desc">This I cannot accept; Under the tree sat an old man</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-129" data-num="129" data-search="advanced passives and impersonal structures it is widely acknowledged that…; there is said to be…">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-129" onchange="toggleTopic(129)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#129</span>
+                      <h3 class="topic-title">Advanced passives and impersonal structures</h3>
+                    </div>
+                    <p class="topic-desc">It is widely acknowledged that…; There is said to be…</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-130" data-num="130" data-search="advanced modal meanings criticism, expectation, probability, past deduction">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-130" onchange="toggleTopic(130)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#130</span>
+                      <h3 class="topic-title">Advanced modal meanings</h3>
+                    </div>
+                    <p class="topic-desc">criticism, expectation, probability, past deduction</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-131" data-num="131" data-search="advanced nominalisation decide → decision; analyse → analysis (academic tone)">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-131" onchange="toggleTopic(131)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#131</span>
+                      <h3 class="topic-title">Advanced nominalisation</h3>
+                    </div>
+                    <p class="topic-desc">decide → decision; analyse → analysis (academic tone)</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-132" data-num="132" data-search="complex noun phrases pre- and post-modification in formal/academic text">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-132" onchange="toggleTopic(132)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#132</span>
+                      <h3 class="topic-title">Complex noun phrases</h3>
+                    </div>
+                    <p class="topic-desc">pre- and post-modification in formal/academic text</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-133" data-num="133" data-search="hedging tend to, appear to, seem to, be likely to, arguably">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-133" onchange="toggleTopic(133)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#133</span>
+                      <h3 class="topic-title">Hedging</h3>
+                    </div>
+                    <p class="topic-desc">tend to, appear to, seem to, be likely to, arguably</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-134" data-num="134" data-search="intensifying and softening language utterly, severely, somewhat, to some extent">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-134" onchange="toggleTopic(134)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#134</span>
+                      <h3 class="topic-title">Intensifying and softening language</h3>
+                    </div>
+                    <p class="topic-desc">utterly, severely, somewhat, to some extent</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-135" data-num="135" data-search="formal versus informal grammar choices register awareness across genres">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-135" onchange="toggleTopic(135)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#135</span>
+                      <h3 class="topic-title">Formal versus informal grammar choices</h3>
+                    </div>
+                    <p class="topic-desc">register awareness across genres</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-136" data-num="136" data-search="cohesion reference, substitution, ellipsis, lexical repetition">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-136" onchange="toggleTopic(136)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#136</span>
+                      <h3 class="topic-title">Cohesion</h3>
+                    </div>
+                    <p class="topic-desc">reference, substitution, ellipsis, lexical repetition</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-137" data-num="137" data-search="discourse markers for argument and academic writing signposting, balancing points, counter-arguments">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-137" onchange="toggleTopic(137)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#137</span>
+                      <h3 class="topic-title">Discourse markers for argument and academic writing</h3>
+                    </div>
+                    <p class="topic-desc">signposting, balancing points, counter-arguments</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-138" data-num="138" data-search="punctuation for complex writing semicolons, colons, em-dashes, hyphens in style">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-138" onchange="toggleTopic(138)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#138</span>
+                      <h3 class="topic-title">Punctuation for complex writing</h3>
+                    </div>
+                    <p class="topic-desc">semicolons, colons, em-dashes, hyphens in style</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-139" data-num="139" data-search="british / american grammatical differences collective nouns, have got vs have, past participles">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-139" onchange="toggleTopic(139)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#139</span>
+                      <h3 class="topic-title">British / American grammatical differences</h3>
+                    </div>
+                    <p class="topic-desc">collective nouns, have got vs have, past participles</p>
+                  </div>
+                </div>
+              
+                <div class="topic-card" id="topic-card-140" data-num="140" data-search="editing & recurring error diagnosis identifying recurring grammar errors in advanced writing">
+                  <div class="checkbox-wrap">
+                    <input type="checkbox" class="custom-check" id="check-140" onchange="toggleTopic(140)">
+                  </div>
+                  <div class="topic-content">
+                    <div class="topic-head">
+                      <span class="topic-num">#140</span>
+                      <h3 class="topic-title">Editing & recurring error diagnosis</h3>
+                    </div>
+                    <p class="topic-desc">identifying recurring grammar errors in advanced writing</p>
+                  </div>
+                </div>
+              
+            </div>
+          </section>
+        
+    </main>
+
+    <!-- FOOTER -->
+    <div class="footer-bar">
+      <div>Master Grammar Sequence • 140 Topics Core Syllabus</div>
+      <div class="footer-actions">
+        <button class="btn-secondary" onclick="copyTopicsList()">📋 Copy All 140 Topics</button>
+        <button class="btn-secondary" onclick="window.print()">🖨️ Print / Save PDF</button>
+        <button class="btn-secondary" onclick="resetAllProgress()">🔄 Reset Checkmarks</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-popup" id="toastPopup">Copied to clipboard!</div>
+
+  <script>
+    const STORAGE_KEY = 'grammar_syllabus_master_140';
+    let completedTopics = new Set();
+    let onlyPending = false;
+
+    // Load progress from localStorage
+    function loadProgress() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          const arr = JSON.parse(saved);
+          completedTopics = new Set(arr);
+        }
+      } catch (e) {
+        console.error("Error loading progress", e);
+      }
+      updateUI();
+    }
+
+    // Save progress to localStorage
+    function saveProgress() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(completedTopics)));
+      } catch (e) {
+        console.error("Error saving progress", e);
+      }
+      updateProgressBar();
+    }
+
+    function toggleTopic(num) {
+      if (completedTopics.has(num)) {
+        completedTopics.delete(num);
+      } else {
+        completedTopics.add(num);
+      }
+      saveProgress();
+      applyCardState(num);
+      if (onlyPending) applyPendingFilter();
+    }
+
+    function applyCardState(num) {
+      const card = document.getElementById('topic-card-' + num);
+      const check = document.getElementById('check-' + num);
+      if (!card || !check) return;
+      const isDone = completedTopics.has(num);
+      check.checked = isDone;
+      if (isDone) {
+        card.classList.add('completed');
+      } else {
+        card.classList.remove('completed');
+      }
+    }
+
+    function updateUI() {
+      for (let i = 1; i <= 140; i++) {
+        applyCardState(i);
+      }
+      updateProgressBar();
+    }
+
+    function updateProgressBar() {
+      const count = completedTopics.size;
+      const percent = Math.round((count / 140) * 100);
+      document.getElementById('progressFill').style.width = percent + '%';
+      document.getElementById('progressText').textContent = count + ' / 140 (' + percent + '%)';
+    }
+
+    function handleSearch() {
+      const query = document.getElementById('searchInput').value.trim().toLowerCase();
+      const cards = document.querySelectorAll('.topic-card');
+
+      cards.forEach(card => {
+        const text = card.getAttribute('data-search') || '';
+        const num = card.getAttribute('data-num');
+        const matchesQuery = !query || text.includes(query) || ('#' + num).includes(query);
+        const matchesPending = !onlyPending || !completedTopics.has(parseInt(num, 10));
+
+        if (matchesQuery && matchesPending) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Hide empty stages
+      document.querySelectorAll('.stage-section').forEach(sec => {
+        const visibleCards = sec.querySelectorAll('.topic-card[style="display: flex;"]');
+        const hasVisible = (visibleCards.length > 0) || !query;
+        sec.style.display = hasVisible ? 'block' : 'none';
+      });
+    }
+
+    function togglePendingFilter() {
+      onlyPending = !onlyPending;
+      const btn = document.getElementById('filterPendingBtn');
+      if (onlyPending) {
+        btn.classList.add('active');
+        btn.innerHTML = '<span>✓ Showing Incomplete</span>';
+      } else {
+        btn.classList.remove('active');
+        btn.innerHTML = '<span>⚡ Only Incomplete</span>';
+      }
+      handleSearch();
+    }
+
+    function resetAllProgress() {
+      if (confirm('Are you sure you want to reset all 140 checkmarks?')) {
+        completedTopics.clear();
+        saveProgress();
+        updateUI();
+        showToast('All progress reset.');
+      }
+    }
+
+    function copyTopicsList() {
+      const stages = [{"stageNum":1,"title":"Core Verb System","cefr":"A1–B1","icon":"⚡","topics":[{"num":1,"title":"Present continuous","desc":"actions happening now"},{"num":2,"title":"Present simple","desc":"routines, habits, facts, states"},{"num":3,"title":"Present continuous versus present simple","desc":"temporary vs permanent situations"},{"num":4,"title":"Stative verbs","desc":"know, like, believe, need, understand"},{"num":5,"title":"Past simple","desc":"finished past events"},{"num":6,"title":"Past continuous","desc":"actions in progress in the past"},{"num":7,"title":"Past simple versus past continuous","desc":"interruptions and background actions"},{"num":8,"title":"Present perfect simple","desc":"experience and recent events"},{"num":9,"title":"Present perfect with just, already, yet","desc":"timing and expectation"},{"num":10,"title":"Present perfect with ever, never, recently, lately","desc":"life experiences and time frames"},{"num":11,"title":"Present perfect continuous","desc":"ongoing actions with present result or duration"},{"num":12,"title":"Present perfect simple versus continuous","desc":"completed result vs ongoing process"},{"num":13,"title":"For, since, how long, and duration","desc":"measuring time spans from past to now"},{"num":14,"title":"Present perfect versus past simple","desc":"unfinished time vs finished specific time"},{"num":15,"title":"Past perfect simple","desc":"had + V3: an action before another past event"},{"num":16,"title":"Past perfect continuous","desc":"had been doing: duration leading up to a past moment"},{"num":17,"title":"Used to, would, and past habits","desc":"past routines and discontinued states"},{"num":18,"title":"Have, have got, and possession","desc":"ownership, relationships, and illnesses"}]},{"stageNum":2,"title":"Future Meanings","cefr":"B1–B2","icon":"🚀","topics":[{"num":19,"title":"Present continuous for future arrangements","desc":"fixed appointments and personal plans"},{"num":20,"title":"Present simple for timetables and schedules","desc":"official schedules, transport, events"},{"num":21,"title":"Be going to","desc":"plans, intentions, and visible evidence"},{"num":22,"title":"Will","desc":"spontaneous decisions, offers, promises, predictions"},{"num":23,"title":"Shall","desc":"offers, suggestions, and formal future use"},{"num":24,"title":"Will versus going to","desc":"spontaneous vs pre-planned / evidence-based"},{"num":25,"title":"Will versus present continuous","desc":"predictions vs arranged meetings"},{"num":26,"title":"Future continuous","desc":"will be doing: action in progress at a future time"},{"num":27,"title":"Future perfect simple","desc":"will have done: action completed before a future deadline"},{"num":28,"title":"Future perfect continuous","desc":"will have been doing: duration up to a future point"},{"num":29,"title":"Time clauses","desc":"when, until, before, after, as soon as + Present tense"},{"num":30,"title":"Future in the past","desc":"was going to, would, was about to"}]},{"stageNum":3,"title":"Modal Verbs","cefr":"B1–B2","icon":"🛡️","topics":[{"num":31,"title":"Can, could, and be able to","desc":"ability across present, past, and future"},{"num":32,"title":"Can, could, and may","desc":"permission and polite requests"},{"num":33,"title":"Must, have to, and need to","desc":"obligation: internal vs external"},{"num":34,"title":"Mustn’t, don’t have to, and needn’t","desc":"prohibition versus lack of necessity"},{"num":35,"title":"Should, ought to, and had better","desc":"advice, strong recommendation, criticism"},{"num":36,"title":"May, might, and could","desc":"present and future possibility"},{"num":37,"title":"Must, can’t, and might","desc":"logical deduction about the present"},{"num":38,"title":"Modal perfects","desc":"must have, can’t have, might have: past deductions"},{"num":39,"title":"Past modal regrets & criticisms","desc":"should have, ought to have, could have, needn’t have"},{"num":40,"title":"Would","desc":"politeness, preference, habit, and hypothetical meaning"}]},{"stageNum":4,"title":"Questions and Auxiliary Verbs","cefr":"A2–B1","icon":"❓","topics":[{"num":41,"title":"Yes/no questions and wh-questions","desc":"standard auxiliary inversion patterns"},{"num":42,"title":"Subject questions versus object questions","desc":"Who saw you? vs Who did you see?"},{"num":43,"title":"Question word order","desc":"prepositions at the end, complex question frames"},{"num":44,"title":"Indirect questions","desc":"Do you know where…? / Could you tell me if…?"},{"num":45,"title":"Negative questions","desc":"Don’t you…? / Isn’t it…?: surprise or confirmation"},{"num":46,"title":"Short answers and auxiliary verbs","desc":"so do I, neither do I, I am too"},{"num":47,"title":"Question tags","desc":"intonation, agreement, and checking information"},{"num":48,"title":"Emphatic do","desc":"I do agree; I did call you yesterday"},{"num":49,"title":"Ellipsis and substitution","desc":"so, neither, not, do so, avoiding repetition"}]},{"stageNum":5,"title":"Conditionals, Wishes, and Unreal Meaning","cefr":"B1–B2","icon":"🔮","topics":[{"num":50,"title":"Zero conditional","desc":"facts, scientific truths, general rules"},{"num":51,"title":"First conditional","desc":"real future possibility and consequences"},{"num":52,"title":"Conditional conjunctions","desc":"unless, provided/providing, as long as, in case"},{"num":53,"title":"Second conditional","desc":"present/future hypothetical situations (unreal)"},{"num":54,"title":"Third conditional","desc":"past hypothetical situations and regret"},{"num":55,"title":"Mixed conditionals","desc":"past cause with present result, or vice versa"},{"num":56,"title":"I wish and if only for present situations","desc":"wishes about current reality (past tense)"},{"num":57,"title":"I wish and if only for past regret","desc":"regrets about past events (past perfect)"},{"num":58,"title":"Unreal structures","desc":"would rather, would prefer, it’s time, and suppose"},{"num":59,"title":"As if and as though","desc":"similes, impressions, and hypothetical appearance"}]},{"stageNum":6,"title":"Passive and Causative Structures","cefr":"B1–B2","icon":"⚙️","topics":[{"num":60,"title":"Passive voice: present and past simple","desc":"be + V3: focus on action and receiver"},{"num":61,"title":"Passive voice: continuous and perfect forms","desc":"is being done, has been done, had been done"},{"num":62,"title":"Passive with modal verbs","desc":"must be done; should have been done"},{"num":63,"title":"Passive reporting structures","desc":"It is said that…; He is believed to…"},{"num":64,"title":"Verbs with two objects in the passive","desc":"I was given… vs It was given to me"},{"num":65,"title":"Causative have/get something done","desc":"arranging for a professional service"},{"num":66,"title":"Causative verbs","desc":"make, let, have, get, and help somebody do"},{"num":67,"title":"Get passive","desc":"get hurt, get promoted, get arrested: informal/action"}]},{"stageNum":7,"title":"Reported Speech","cefr":"B1–B2","icon":"💬","topics":[{"num":68,"title":"Reported statements","desc":"say that, tell somebody that"},{"num":69,"title":"Tense backshift in reported speech","desc":"present to past, past to past perfect"},{"num":70,"title":"Reported questions","desc":"if/whether, wh-word order (no question mark/inversion)"},{"num":71,"title":"Reported commands, requests, advice, and warnings","desc":"tell/ask/warn somebody to do"},{"num":72,"title":"Reporting verbs","desc":"admit, deny, suggest, recommend, promise, refuse"},{"num":73,"title":"Reporting verbs with to-infinitive, -ing, or that-clauses","desc":"verb pattern categorisation"},{"num":74,"title":"Direct speech, quotation, and reporting style","desc":"punctuation and literary/journalistic formats"}]},{"stageNum":8,"title":"Verb Patterns","cefr":"B1–B2","icon":"🧩","topics":[{"num":75,"title":"Verb + -ing","desc":"enjoy doing, avoid doing, suggest doing"},{"num":76,"title":"Verb + to-infinitive","desc":"decide to do, hope to do, manage to do"},{"num":77,"title":"Verb + object + to-infinitive","desc":"want somebody to do, advise somebody to do"},{"num":78,"title":"Verb + object + bare infinitive","desc":"make/let somebody do"},{"num":79,"title":"Verb + -ing or infinitive: different meaning","desc":"remember, stop, try, regret, forget"},{"num":80,"title":"Verb + -ing or infinitive: little/no difference","desc":"begin, start, continue, intend"},{"num":81,"title":"Prefer, would prefer, and would rather","desc":"expressing general vs specific preferences"},{"num":82,"title":"Verbs of perception","desc":"see/hear/watch somebody do vs doing"},{"num":83,"title":"Infinitives of purpose","desc":"to do, in order to do, so as to do"},{"num":84,"title":"Result and purpose clauses","desc":"so that, such…that, too…to, enough to"},{"num":85,"title":"Participle clauses","desc":"Having finished…, Feeling tired…, Built in 1900…"}]},{"stageNum":9,"title":"Nouns, Articles, Determiners, and Pronouns","cefr":"A2–B2","icon":"🏷️","topics":[{"num":86,"title":"Countable and uncountable nouns","desc":"mass nouns, dual nouns, measurement units"},{"num":87,"title":"Quantifiers: basic & large quantities","desc":"some, any, much, many, a lot of, plenty of"},{"num":88,"title":"Quantifiers: small quantities","desc":"few, a few, little, a little, less, fewer"},{"num":89,"title":"Articles: indefinite (a/an)","desc":"first mention, jobs, singular countables"},{"num":90,"title":"Articles: definite (the)","desc":"unique nouns, second mention, shared context"},{"num":91,"title":"Zero article","desc":"general meaning, institutions (school, hospital), meals, places"},{"num":92,"title":"Articles with geographical & proper names","desc":"oceans, mountain ranges vs single peaks, countries"},{"num":93,"title":"Nouns & Plurals","desc":"singular and plural nouns, irregular plurals, collective nouns"},{"num":94,"title":"Possession","desc":"apostrophe-s ('s) and 'of' structures"},{"num":95,"title":"Pronouns","desc":"subject, object, possessive, reflexive, reciprocal"},{"num":96,"title":"Determiners","desc":"all, every, each, both, either, neither"},{"num":97,"title":"Indefinite pronouns","desc":"someone, anyone, no one, everything"},{"num":98,"title":"There and it","desc":"dummy subjects and introductory structures"},{"num":99,"title":"One/ones, substitution, and avoiding repetition","desc":"replacing countable nouns in discourse"}]},{"stageNum":10,"title":"Description and Comparison","cefr":"B1–B2","icon":"⚖️","topics":[{"num":100,"title":"Adjective order","desc":"opinion, size, age, shape, color, origin, material, purpose"},{"num":101,"title":"Participial adjectives","desc":"boring/bored; interested/interesting (-ed vs -ing)"},{"num":102,"title":"Adjectives after linking verbs","desc":"seem, look, feel, become, taste, smell"},{"num":103,"title":"Adverbs","desc":"manner, frequency, degree, place, and comment"},{"num":104,"title":"Adjective versus adverb pairs","desc":"hard/hardly, late/lately, near/nearly, fast/fast"},{"num":105,"title":"Comparatives","desc":"-er vs more, irregular comparatives"},{"num":106,"title":"Comparative modifiers","desc":"much, far, slightly, a bit, significantly"},{"num":107,"title":"Equality and inequality","desc":"as…as, not as…as, less…than"},{"num":108,"title":"Superlatives","desc":"the -est, the most, least, irregular forms"},{"num":109,"title":"Advanced comparison","desc":"the more…the more; by far; one of the most"},{"num":110,"title":"Degree structures","desc":"so, such, too, enough, quite, rather, fairly"}]},{"stageNum":11,"title":"Clauses and Sentence Structure","cefr":"B2","icon":"🔗","topics":[{"num":111,"title":"Basic word order","desc":"subject–verb–object, place before time"},{"num":112,"title":"Adverb position and order of adverbs","desc":"front, mid, and end sentence placements"},{"num":113,"title":"Relative clauses: defining clauses","desc":"essential identification, no commas, 'that' allowed"},{"num":114,"title":"Relative clauses: non-defining clauses","desc":"extra information, commas required, no 'that'"},{"num":115,"title":"Relative pronouns","desc":"who, whom, whose, which, that, where, when"},{"num":116,"title":"Reduced relative clauses","desc":"the people living here; the book written by…"},{"num":117,"title":"Noun clauses","desc":"what, whether, if, that-clauses acting as subjects/objects"},{"num":118,"title":"Reason, result, purpose, and contrast clauses","desc":"adverbial clause structures"},{"num":119,"title":"Linkers of cause and result","desc":"because, since, as, so, therefore, consequently"},{"num":120,"title":"Contrast linkers","desc":"although, though, even though, despite, in spite of"},{"num":121,"title":"Addition and alternative","desc":"in addition, moreover, besides, either…or"},{"num":122,"title":"Time linkers","desc":"while, during, by the time, until, since"},{"num":123,"title":"Concession and condition","desc":"even if, whereas, while, otherwise"}]},{"stageNum":12,"title":"C1 Grammar and Style","cefr":"C1","icon":"🎓","topics":[{"num":124,"title":"Inversion after negative/limiting adverbials","desc":"Never have I seen… / Rarely do they mention…"},{"num":125,"title":"Inversion with time sequences","desc":"hardly, scarcely, no sooner…than"},{"num":126,"title":"Inversion in conditionals","desc":"Had I known…; Were I to…; Should you require…"},{"num":127,"title":"Cleft sentences","desc":"It was John who…; What I need is…; All I want is…"},{"num":128,"title":"Fronting for emphasis","desc":"This I cannot accept; Under the tree sat an old man"},{"num":129,"title":"Advanced passives and impersonal structures","desc":"It is widely acknowledged that…; There is said to be…"},{"num":130,"title":"Advanced modal meanings","desc":"criticism, expectation, probability, past deduction"},{"num":131,"title":"Advanced nominalisation","desc":"decide → decision; analyse → analysis (academic tone)"},{"num":132,"title":"Complex noun phrases","desc":"pre- and post-modification in formal/academic text"},{"num":133,"title":"Hedging","desc":"tend to, appear to, seem to, be likely to, arguably"},{"num":134,"title":"Intensifying and softening language","desc":"utterly, severely, somewhat, to some extent"},{"num":135,"title":"Formal versus informal grammar choices","desc":"register awareness across genres"},{"num":136,"title":"Cohesion","desc":"reference, substitution, ellipsis, lexical repetition"},{"num":137,"title":"Discourse markers for argument and academic writing","desc":"signposting, balancing points, counter-arguments"},{"num":138,"title":"Punctuation for complex writing","desc":"semicolons, colons, em-dashes, hyphens in style"},{"num":139,"title":"British / American grammatical differences","desc":"collective nouns, have got vs have, past participles"},{"num":140,"title":"Editing & recurring error diagnosis","desc":"identifying recurring grammar errors in advanced writing"}]}];
+      let text = "COMPLETE 140-TOPIC MASTER GRAMMAR SYLLABUS\n\n";
+      stages.forEach(s => {
+        text += "STAGE " + s.stageNum + ": " + s.title.toUpperCase() + " (" + s.cefr + ")\n";
+        s.topics.forEach(t => {
+          text += t.num + ". " + t.title + ": " + t.desc + "\n";
+        });
+        text += "\n";
+      });
+
+      navigator.clipboard.writeText(text).then(() => {
+        showToast("Copied all 140 topics to clipboard!");
+      }).catch(() => {
+        showToast("Unable to copy to clipboard.");
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toastPopup');
+      toast.textContent = msg;
+      toast.style.display = 'block';
+      setTimeout(() => {
+        toast.style.display = 'none';
+      }, 2500);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      loadProgress();
+    });
+  </script>
+</body>
+</html>
